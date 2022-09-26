@@ -1,3 +1,8 @@
+/*
+Молодчина! Жду 12 домашку тоже!
+*/
+
+
 describe ('Check LogIn form on main page', () => {
     before ('Open page', () => {
         cy.visit('https://yevheniiahlovatska.editorx.io/web-practice/');
