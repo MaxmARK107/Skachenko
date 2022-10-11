@@ -1,3 +1,10 @@
+/*
+Commanets: 
+1. Плохо читается, надо улучшать, выносить body в переменные
+2. Еще по нет запросов по store. and user?
+*/
+
+
 describe ('', () => {
     it ('petstore.swagger.io/#/', () => {
         const reqUrl = "https://petstore.swagger.io/v2/pet";
