@@ -17,6 +17,7 @@
 import './commands'
 import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
 addMatchImageSnapshotCommand();
+import 'cypress-localstorage-commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

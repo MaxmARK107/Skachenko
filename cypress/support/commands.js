@@ -23,3 +23,24 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('ClickOnElement', (elementLocator) => {
+    cy.get (`${elementLocator}`, {timeout: 2000}).click();
+});
+Cypress.Commands.add('TypeTextIn', (elementLocator, text) => {
+    cy.get (elementLocator, {timeout: 4000})
+    .should('be.visible')
+    .type(text);
+});
+
+/**
+ * FindByText
+ * @param text
+ */
+Cypress.Commands.add('FindByText', (text) => {
+    cy.get(`//*[contains(text(), ${text})]`);
+});
+
+/*Cypress.Commands.add('ClickLinkText', (elementLocator, text) => {
+    cy.get(elementLocator).contains(text).click();
+});
+*/
