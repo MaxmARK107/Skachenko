@@ -23,8 +23,8 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add('ClickOnElement', (elementLocator) => {
-    cy.get (`${elementLocator}`, {timeout: 2000}).click();
+Cypress.Commands.add('CloseCookieMessage', (elementLocator) => {
+    cy.get ('[aria-label="Close"]', {timeout: 2000}).click();
 });
 Cypress.Commands.add('TypeTextIn', (elementLocator, text) => {
     cy.get (elementLocator, {timeout: 4000})
