@@ -11,8 +11,26 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
+Cypress.Commands.add('CloseCookieMessage', (elementLocator) => {
+    cy.get ('[aria-label="Close"]', {timeout: 2000}).click();
+});
+Cypress.Commands.add('TypeTextIn', (elementLocator, text) => {
+    cy.get (elementLocator, {timeout: 4000})
+    .should('be.visible')
+    .type(text);
+});
+Cypress.Commands.add('ClickOnElement', (elementSelector) => {
+    cy.get(elementSelector).click();
+    cy.log();
+});
+
+Cypress.Commands.add('CheckElementText', (elementSelector, text) => {
+    cy.get(elementSelector).invoke('text').should('equal', text);
+});
+
+Cypress.Commands.add('TypeTextintoField', (elementSelector, text) => {
+    cy.get(elementSelector).type(text);
+});
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
@@ -23,14 +41,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add('CloseCookieMessage', (elementLocator) => {
-    cy.get ('[aria-label="Close"]', {timeout: 2000}).click();
-});
-Cypress.Commands.add('TypeTextIn', (elementLocator, text) => {
-    cy.get (elementLocator, {timeout: 4000})
-    .should('be.visible')
-    .type(text);
-});
+
 
 /**
  * FindByText

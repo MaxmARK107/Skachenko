@@ -2,13 +2,13 @@ const { defineConfig } = require("cypress");
 const {addMatchImageSnapshotPlugin} = require ('cypress-image-snapshot/plugin');
 module.exports = defineConfig({
   e2e: {
-    viewportHeight: 768,
-    viewportWidth: 1900,
+    viewportHeight: 1080,
+    viewportWidth: 1920,
     setupNodeEvents(on, config) {
     addMatchImageSnapshotPlugin(on, config);
     },
     excludeSpecPattern: ['**/cypress/e2e/1-getting-started', '**/cypress/e2e/2-advanced-examples'],
-    baseUrl: 'https://www.beaxy.com',
+    baseUrl: 'https://www.maxon.net/',
     defaultCommandTimeout: 2000,
     retries: 1,
     redirectionLimit: 3,

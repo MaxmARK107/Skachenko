@@ -15,5 +15,9 @@
     "cypress-image-snapshot": "^4.0.1",
     "cypress-localstorage-commands": "^2.2.1",
     "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^13.0.3",
+    "cypress-real-events": "^1.7.2"
   }
 }
