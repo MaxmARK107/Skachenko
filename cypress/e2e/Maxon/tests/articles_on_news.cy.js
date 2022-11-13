@@ -1,4 +1,5 @@
 /// <reference types = 'Cypress'/>
+import cookie from '../pages/cookie_popup'
 import header from '../pages/header'
 import news from '../pages/news'
 
@@ -7,16 +8,15 @@ describe ('Total feature', () => {
         cy.visit('/');
     });
     it('Articles on news page check', () => {
+        // cy.get(cookie.selectors.allowAllCookieButton).click();
+        // cy.get(header.selectors.newsSectionButton).click();
+        // cy.get(header.selectors.headlinesSubSection).click();
+        // cy.get(news.selectors.firstArticleBlock).should('be.visible');
+        // cy.get(news.selectors.articleBlocksContainer).its('length').should('equal', 24);
+        clickOnElement(cookie.selectors.allowAllCookieButton);
         clickOnElement(header.selectors.newsSectionButton);
-        cy.get(header.selectors.newsDropdown).invoke(visible);
         clickOnElement(header.selectors.headlinesSubSection);
         cy.get(news.selectors.firstArticleBlock).should('be.visible');
-    });
-    it('Articles on news page check', () => {
-        clickOnElement(header.selectors.newsSectionButton);
-        cy.get(header.selectors.newsDropdown).invoke(visible);
-        clickOnElement(header.selectors.headlinesSubSection);
         cy.get(news.selectors.articleBlocksContainer).its('length').should('equal', 24);
-    });
-    
+    });    
 });

@@ -10,7 +10,7 @@ module.exports = defineConfig({
     excludeSpecPattern: ['**/cypress/e2e/1-getting-started', '**/cypress/e2e/2-advanced-examples'],
     baseUrl: 'https://www.maxon.net/',
     defaultCommandTimeout: 2000,
-    retries: 1,
+    retries: 0,
     redirectionLimit: 3,
     watchForFileChanges: true,
     pageLoadTimeout: 10000,
