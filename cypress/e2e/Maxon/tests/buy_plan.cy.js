@@ -9,8 +9,8 @@ describe ('Total feature', () => {
         
     });
     it('Total feature check', () => {
-        ClickOnElement(header.selectors.buySection);
-        clickOnElement(buy.selectors.buyAnnualFirstPlan);
+        header.selectMenuItem('BUY', false);
+        cy.get(buy.selectors.buyAnnualFirstPlan).click();
         CheckElementText(cart.selectors.totalPriceInclVatValue, '1.351,77 €');
         
     });
