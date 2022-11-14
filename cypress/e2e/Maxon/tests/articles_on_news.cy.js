@@ -13,7 +13,7 @@ describe ('Total feature', () => {
         // cy.get(header.selectors.headlinesSubSection).click();
         // cy.get(news.selectors.firstArticleBlock).should('be.visible');
         // cy.get(news.selectors.articleBlocksContainer).its('length').should('equal', 24);
-        // clickOnElement(cookie.selectors.allowAllCookieButton);
+        clickOnElement(cookie.selectors.allowAllCookieButton);
         header.selectMenuItem('HEADLINES', 'NEWS');
         cy.get(news.selectors.firstArticleBlock).should('be.visible');
         cy.get(news.selectors.articleBlocksContainer).its('length').should('equal', 24);
