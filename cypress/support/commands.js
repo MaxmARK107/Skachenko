@@ -31,6 +31,15 @@ Cypress.Commands.add('CheckElementText', (elementSelector, text) => {
 Cypress.Commands.add('TypeTextintoField', (elementSelector, text) => {
     cy.get(elementSelector).type(text);
 });
+Cypress.Commands.add('getText', (selector) => {  
+    let productName;
+    cy.get(selector).eq(0)
+    .then(($element) => {
+      productName = $element.text()    
+  }).then(() => {
+    cy.wrap(productName)
+  })
+});
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
